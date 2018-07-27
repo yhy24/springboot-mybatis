@@ -1,0 +1,15 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.spring.mybatis.dao.UserDao">
+
+    <select id="selectUserId" resultType="com.spring.mybatis.bean.User">
+        SELECT * from user_info WHERE id = #{id}
+    </select>
+
+    <update id="updateUserById" parameterType="com.spring.mybatis.bean.User">
+        UPDATE user_info SET mark=#{mark},phone=#{phone} WHERE id = #{id}
+    </update>
+
+</mapper>
